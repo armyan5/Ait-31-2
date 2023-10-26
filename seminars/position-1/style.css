@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.composition {
+    width: 600px;
+    height: 400px;
+    background-image: url("img/bg.jpg");
+    position: relative;
+}
+
+img{
+    position: absolute;
+}
+
+.planeta1{
+
+top: 8%;
+left: 28%;
+
+}
+
+.planeta2{
+    top: 10%;
+    left: 5%;
+    
+}
+
+.planeta3{
+    bottom: 5%;
+    left: 20%;
+    
+}
+
+.asteroid{
+    top: 21%;
+    right: 21%;
+    
+}
+
+.spaceship{
+   bottom: 50%;
+   left: 20%;
+    
+}
+
+.ufo{
+    bottom: 10%;
+    left: 18%;
+
+    
+}
+
+.superman{
+    bottom: 0;
+    right: 5.7%;
+}
+
+
+
+
+
+
+
