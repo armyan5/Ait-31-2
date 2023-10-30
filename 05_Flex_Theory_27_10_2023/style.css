@@ -1,0 +1,55 @@
+.flex-container {
+    background-color: pink;
+    height: 500px;
+    width: 900px;
+
+
+    /*FLEX*/
+
+    display: flex;
+
+    /* svoystva nije vozmojno tolko pri display: flex;*/
+  
+    /* perenosit ili net elementi na sleduyushiy strok,esli oni ne pomeshayutsa */
+    flex-wrap: nowrap;
+
+    /* princip raspolojenie vnutrennix elementov ( v stroku/ v stolbik i napravlenya */
+    flex-direction: row;
+
+
+    /* raspolojenya po vertikali */
+    align-content: space-between;
+
+
+    /*raspolojenya elementa otnasitelno svayey stroki*/
+    align-items: center;
+
+  
+   
+}
+
+.item {
+ height: 200px;
+ width: 200px;
+}
+
+.aqua {
+    background-color: aqua;
+}
+
+.blue {
+    background-color: blue;
+    height: 150px;
+}
+
+.brown {
+    background-color: brown;
+}
+
+.red {
+    background-color: red;
+}
+
+.gray {
+    background-color: lightgrey;
+}
