@@ -11,12 +11,25 @@ const info = document.getElementById('WeatherContainer');
 button.onclick = () => {
     const cityName = input.value.trim();
 
-    if(cityName) {
-     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}&units=metric`)
-        .then(response => response.json())
-        .then(weather => displayWeather(weather));
+    async function fetchCity() {
+        try{
+            const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}&units=metric');
+            const cityName = await response.json();
+
+
+        }catch (error) {
+
+            console.log(error);
+        }
+        
     }
-    input.value = '';
+
+    // if(cityName) {
+    //  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}&units=metric`)
+    //     .then(response => response.json())
+    //     .then(weather => displayWeather(weather));
+    // }
+    // input.value = '';
 };
 
 function displayWeather(data) {
