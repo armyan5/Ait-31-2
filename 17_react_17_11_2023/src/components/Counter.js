@@ -10,11 +10,23 @@ const Counter = ()=> {
     setCount(count + 1);
    } 
 
+   const increment2 = () => {
+    setCount(count -10);
+   }
+
+   const decrement2 = () => {
+    setCount(count +10);
+   }
+
+
     return (
     <>
         <h2>Counter: {count}</h2>
         <button onClick={() => setCount(count -1)}>Decrement</button>
         <button onClick={increment}>Increment</button>
+        <button onClick={increment2}>Decrement -10</button>
+        <button onClick={decrement2}>Increment +10</button>
+        
     </>
     );
 }
