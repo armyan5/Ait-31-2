@@ -1,37 +1,80 @@
 import React, { ChangeEvent, useState } from 'react'
+import Todo from './Todo';
+import JsonTodos from './JsonTodos';
+
+interface ITask {
+    name: string,
+    completed: boolean
+}
 
 // rafce or rce
-const TodoList = () => {
-    const [taskList, setTaskList] = useState<string[]>([]);
-    const [task, setTask] = useState<string>('');
+const TodoList: React.FC = (): JSX.Element => {
+    const [taskList, setTaskList] = useState<ITask[]>([]);
+    const [task, setTask] = useState<ITask>({name: '',completed: false});
+    const [check,setCheck] = useState<boolean>(false);
 
     const handleAddTask = () => {
         setTaskList((prev) => [...prev, task]);
-        setTask('');
+        setTask({name: '',completed: false});
     }
 
     const handleChangeTask = (e: ChangeEvent<HTMLInputElement>): void => {
-        setTask(() => e.target.value);
+        setTask({
+            name:e.target.value,
+            completed: false
+        });
         // console.log(task); ?
     }
 
+    const handleRemoveTask = (index: number): void => {
+        const taskListCopy: ITask[] = [...taskList];  // sarqumenq remove knopken 
+        taskListCopy.splice(index,1);
+        setTaskList(taskListCopy);
+    }
+
+    const handleIsDone = (e: ChangeEvent<HTMLInputElement>) => {
+        // check = e.target.checked (Error! lokalnaya sostayaniya ne izmenyayetsa na primuyu,tolko s pomoshyu specialnogo metoda)
+        setCheck(e.target.checked); 
+        
+        
+
+        // const taskListCopy: ITask[] = [...taskList]; 
+      //  const index = taskListCopy.findIndex(task => task.name ===)
+        
+    }
+
+
+
   return (
-    <div>
+    <div className='container'>
         <h1>TodoList App</h1>
         <input
+        className='form-control'
+        style={{display:'inline',width: '65%'}}
             type="text"
             placeholder='Enter a task...'
             onChange={(e) => handleChangeTask(e)}
-            value={task}
+            value={task.name}
         />
-        <button onClick={handleAddTask}>Add task</button>
-        <ol>
+        
+        <button style= {{marginBottom: '5px'}}className= 'btn btn-primary 'onClick={handleAddTask}>Add task</button>
+        <ol className='task-list'>
             {taskList.map((t, i) => (
-                <li key={i}>{t}</li>
+                <Todo
+                 key={i}
+                 taskName = {t.name} 
+                 index = {i} 
+                 done = {check} 
+                 remove = {handleRemoveTask} 
+                 isDone = {handleIsDone}
+                 />
             ))}
+            
         </ol>
+        <JsonTodos/>
+       
     </div>
-  )
+  );
 }
 
 export default TodoList
