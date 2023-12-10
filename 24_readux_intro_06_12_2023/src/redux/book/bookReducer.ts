@@ -4,12 +4,12 @@ import { uid } from 'uid';
 
 const initialState: BookState = {
     books: [
-        { isbn: '1', title: 'Harry Potter', author: 'J.Rowling', year: 1997 }
+        { isbn: '1', title: 'Harry Potter', author: 'J.Rowling', year: '1997 '}
     ]
 };
 
 export default function booksReducer(
-    state: BookState,
+    state: BookState = initialState,
     action: bookAction
 
 ): BookState {
@@ -18,11 +18,17 @@ export default function booksReducer(
         case 'books/add':
             return {...state,books: [...state.books, {isbn: uid(),...action.payload}]};
 
-        // case "books/delete":
-        //     return;
+         case "books/delete": 
+            return {...state,books: state.books.filter(book => book.isbn !==action.payload)};
 
-        // case "books/editTitle":
-        //     return;
+        case "books/editTitle":
+            return{...state,books: state.books.map(book => {
+                if (book.isbn === action.payload.isbn) {
+                    return{...book,title:action.payload.title}
+                }
+                return book;
+            })};
+        
 
 
         default:
