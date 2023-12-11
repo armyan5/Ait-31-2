@@ -29,12 +29,12 @@ const Counter: React.FC = (): JSX.Element => {
      };
 
   return (
-    <div>
-        <div>Counter: {counter} </div>
-        <button onClick={handleMinus10}>Minus10</button>
-        <button onClick={handleMinus}>Minus</button>
-        <button onClick={handlePlus}>Plus</button>
-        <button onClick={handlePlus10}>Plus10</button>
+    <div className='divc'>
+        <div className='divc1'>Counter: {counter} </div>
+        <button className='bc1' onClick={handleMinus10}>Minus10</button>
+        <button className='bc2' onClick={handleMinus}>Minus</button>
+        <button className='bc3' onClick={handlePlus}>Plus</button>
+        <button className='bc4' onClick={handlePlus10}>Plus10</button>
         
     </div>
   )

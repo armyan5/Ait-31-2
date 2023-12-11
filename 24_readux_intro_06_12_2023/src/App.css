@@ -1,0 +1,118 @@
+.container {
+  margin: 0;
+  background-color: rgb(40, 155, 255);
+}
+
+.book {
+  font-variant: small-caps;
+  font-size: 55px;
+  color: rgb(1, 32, 75);
+}
+
+.li {
+  color: rgb(1, 100, 157);
+  font-size: 20px;
+}
+
+.button {
+  color: rgb(114, 142, 158);
+  background-color: rgb(2, 37, 86);
+}
+
+.div {
+  font-variant: small-caps;
+  margin: 0px;
+  color: rgb(4, 65, 152);
+  background-color: rgb(90, 176, 252);
+}
+
+.h1 {
+  font-size: 45px;
+  color: rgb(2, 37, 86);
+}
+
+.button1 {
+  color: rgb(114, 142, 158);
+  background-color: rgb(2, 37, 86);
+}
+
+.input1 {
+  background-color: rgb(253, 88, 0);
+}
+
+.input2 {
+  background-color: rgb(40, 254, 2);
+}
+
+.input3 {
+  background-color: rgb(253, 249, 2);
+}
+
+.input {
+  background-color: rgb(253, 249, 2);
+}
+
+.but {
+  color: rgb(114, 142, 158);
+  background-color: rgb(2, 37, 86);
+}
+
+.div1 {
+  font-variant: small-caps;
+  margin: 0%;
+  background-color: rgb(133, 195, 249);
+}
+
+.sand {
+  color: rgb(1, 53, 124);
+  font-size: 35px;
+}
+
+.but1 {
+  background-color: rgb(253, 249, 2);
+}
+
+.but2 {
+  background-color: rgb(40, 254, 2);
+}
+
+.but3 {
+  background-color: rgb(253, 88, 0);
+}
+
+.but4 {
+  color: rgb(114, 142, 158);
+  background-color: rgb(2, 37, 86);
+}
+
+.pars {
+  font-size: 18px;
+  color: rgb(3, 33, 124);
+}
+
+.divc {
+  margin: 0%;
+  background-color: rgb(170, 215, 255);
+}
+
+.divc1 {
+  font-size: 20px;
+  font-variant: small-caps;
+  color: rgb(4, 39, 147);
+}
+
+.bc1 {
+  background-color: rgb(253, 88, 0);
+}
+
+.bc2 {
+  background-color: rgb(253, 88, 0);
+}
+
+.bc3 {
+  background-color: rgb(40, 254, 2);
+}
+
+.bc4 {
+  background-color: rgb(40, 254, 2);
+}

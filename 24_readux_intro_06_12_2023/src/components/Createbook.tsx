@@ -21,7 +21,7 @@ const CreateBook: React.FC = (): JSX.Element => {
 
   return (
     <div>
-      <h1>Create book</h1>
+      <h1 >Create book</h1>
 
       <form onSubmit={handleSubmit}>
         <input
